@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1"
+  },
+  "name": "inventory-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "types": "module",
+  "scripts": {
+    "postgres": "node data/dbScript.js",
+    "start": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JobertDev27/inventory-application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JobertDev27/inventory-application/issues"
+  },
+  "homepage": "https://github.com/JobertDev27/inventory-application#readme"
+}
