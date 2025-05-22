@@ -7,10 +7,12 @@ dotenv.config();
 
 import homepageRouter from "./routes/homepageRouter.js";
 
+const PORT = process.env.PORT || 8080;
+
 const app = express();
+// getting view filepath
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const PORT = process.env.PORT || 8080;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
