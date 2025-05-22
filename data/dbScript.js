@@ -1,7 +1,7 @@
 import { Client } from "pg";
 
 const SQL = `
-CREATE TABLE weapons (
+CREATE TABLE IF NOT EXISTS weapons (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     name VARCHAR (255),
     price INTEGER,
@@ -28,7 +28,7 @@ VALUES
     ('mace', 15, 3, 'blunt');
 `;
 
-async function main() {
+(async function main() {
   console.log("seeding data...");
   const client = new Client({
     connectionString: "postgresql://jobertdev:2718@localhost:5432/inventory",
@@ -37,4 +37,4 @@ async function main() {
   await client.query(SQL);
   await client.end();
   console.log("done!");
-}
+})();
