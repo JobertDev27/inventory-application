@@ -1,4 +1,7 @@
 import { Client } from "pg";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS weapons (
@@ -31,7 +34,7 @@ VALUES
 (async function main() {
   console.log("seeding data...");
   const client = new Client({
-    connectionString: "postgresql://jobertdev:2718@localhost:5432/inventory",
+    connectionString: process.env.DATABASE_URL,
   });
   await client.connect();
   await client.query(SQL);
