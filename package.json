@@ -10,7 +10,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "types": "module",
   "scripts": {
     "postgres": "node data/dbScript.js",
     "start": "node --watch app.js"
@@ -22,7 +21,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/JobertDev27/inventory-application/issues"
   },
