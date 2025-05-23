@@ -1,6 +1,17 @@
 <div class="item-container">
-  <p><%= weapon.name %></p>
-  <p><%= weapon.price %></p>
-  <p><%= weapon.quality %></p>
-  <p><%= weapon.type %></p>
+  <div class="item-image-container">
+    <img
+      src="/images/weapons/<%= weapon.name %>.png"
+      alt="<%= weapon.name %> image"
+    />
+  </div>
+  <div class="weapon-info">
+    <p class="weapon-name"><%= weapon.name %></p>
+    <p class="weapon-price"><%= weapon.price %> G</p>
+  </div>
+  <p class="weapon-quality">
+    <% const star = weapon.quality; %> <% const maxStar = 5 - star; %> <%=
+    "★".repeat(star) + "☆".repeat(maxStar) %>
+  </p>
+  <p class="weapon-type"><%= weapon.type %></p>
 </div>
