@@ -8,23 +8,23 @@ const pool = new Pool({
 });
 
 async function getAllWeapons() {
-  const { res } = await pool.query("SELECT * FROM weapons");
-  return res; // return an array of items containing weapons
+  const { rows } = await pool.query("SELECT * FROM weapons");
+  return rows; // return an array of items containing weapons
 }
 
 async function getQueryWeapons(searchQuery) {
-  const { res } = await pool.query(
+  const { rows } = await pool.query(
     `SELECT * FROM weapons WHERE name ILIKE $1`,
     [`%${searchQuery}%`] // using placeholders to protect against injection
   );
-  return res;
+  return rows;
 }
 
 async function getWeaponsByType(type) {
-  const { res } = await pool.query("SELECT * FROM weapons WHERE type IN $1", [
+  const { rows } = await pool.query("SELECT * FROM weapons WHERE type IN $1", [
     [[type]],
   ]);
-  return res;
+  return rows;
 }
 
 export default { getAllWeapons, getQueryWeapons, getWeaponsByType };
