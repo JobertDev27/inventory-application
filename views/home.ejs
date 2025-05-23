@@ -2,8 +2,21 @@
 <html>
   <head>
     <title><% title %></title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <p>hello world</p>
+    <%- include("partials/header") %>
+    <main>
+      <div class="weapon-grid">
+        <% weapons.map(weapon => { %> <%- include("partials/itemContainer",
+        {weapon : weapon}) %> <% }) %>
+      </div>
+    </main>
   </body>
 </html>
