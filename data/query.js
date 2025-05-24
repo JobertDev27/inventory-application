@@ -27,4 +27,16 @@ async function getWeaponsByType(type) {
   return rows;
 }
 
-export default { getAllWeapons, getQueryWeapons, getWeaponsByType };
+async function getWeaponsById(id) {
+  const { rows } = await pool.query("SELECT * FROM weapons WHERE id = $1", [
+    id,
+  ]);
+  return rows;
+}
+
+export default {
+  getAllWeapons,
+  getQueryWeapons,
+  getWeaponsByType,
+  getWeaponsById,
+};
