@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+    rel="stylesheet"
+  </head>
+  <body>
+    <main class="item-page">
+      <div class="item-page-container">
+        <div>
+          <img
+            src="/images/weapons/<%= weapon.name %>.png"
+            alt="<%= weapon.name %> image"
+          />
+        </div>
+        <div>
+          <p class="weapon-name"><%= weapon.name %></p>
+          <p class="weapon-price"><%= weapon.price %> G</p>
+          <p class="weapon-quality">
+            <% const star = weapon.quality; %> <% const maxStar = 5 - star; %>
+            <%= "★".repeat(star) + "☆".repeat(maxStar) %>
+          </p>
+          <p class="weapon-type"><%= weapon.type %></p>
+          <div class="btn-container">
+            <button
+              class="update-btn"
+              onclick="prompt('Enter admin password:')"
+            >
+              Update
+            </button>
+            <button
+              class="delete-btn"
+              onclick="prompt('Enter admin password:')"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
