@@ -32,6 +32,13 @@ form {
   position: relative;
 }
 
+.bg {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100dvh;
+}
+
 .search-bar {
   width: 100%;
   height: 100%;
@@ -58,12 +65,15 @@ form button {
 .item-container {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
   gap: 5px;
-  background-color: #b9a164;
+  background-color: #b9a164bb;
   padding: 15px 20px;
   border: 2px solid #7f6b39;
   border-radius: 15px;
   width: 250px;
+  cursor: pointer;
 }
 
 .item-image-container {
@@ -99,4 +109,40 @@ form button {
 
 .weapon-type {
   opacity: 0.7;
+}
+
+.item-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+}
+
+.item-page-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-page-container img {
+  width: 128px;
+}
+
+.btn-container {
+  padding-top: 10px;
+}
+
+.delete-btn,
+.update-btn {
+  width: fit-content;
+  padding: 5px 10px;
+}
+
+.delete-btn {
+  background-color: rgb(200, 30, 30);
+}
+
+.update-btn {
+  background-color: rgb(30, 200, 30);
 }
