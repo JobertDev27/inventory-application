@@ -13,6 +13,7 @@
   <body>
     <%- include("partials/header") %>
     <main>
+      <img src="/images/bg.webp" alt="" class="bg" />
       <div class="weapon-grid">
         <% weapons.map(weapon => { %> <%- include("partials/itemContainer",
         {weapon : weapon}) %> <% }) %>
