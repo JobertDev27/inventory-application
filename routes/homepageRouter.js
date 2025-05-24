@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { homepage } from "../controllers/homepageController.js";
+import { homepage, weaponPage } from "../controllers/homepageController.js";
 
 const route = Router();
 
-route.use("/", homepage);
+route.get("/", homepage);
+route.get("/:weaponId", weaponPage);
 
 export default route;
