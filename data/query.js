@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import { name } from "ejs";
 import { Pool } from "pg";
 
 dotenv.config();
@@ -32,6 +33,14 @@ async function getWeaponsById(id) {
     id,
   ]);
   return rows;
+}
+
+async function updateWeapon(data) {
+  const { name, type, price, quality } = data;
+  const toUpdateWeapon = await pool.query(
+    "UPDATE weapons SET name = $1, price $2, quality = $3, type = $4",
+    [name, price, quality, type]
+  );
 }
 
 export default {
