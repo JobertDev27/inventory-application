@@ -36,11 +36,12 @@ async function getWeaponsById(id) {
 }
 
 async function updateWeapon(data) {
-  const { name, type, price, quality } = data;
+  const { name, type, price, quality, id } = data;
   const toUpdateWeapon = await pool.query(
-    "UPDATE weapons SET name = $1, price $2, quality = $3, type = $4",
-    [name, price, quality, type]
+    "UPDATE weapons SET name = $1, price = $2, quality = $3, type = $4 WHERE id = $5",
+    [name, price, quality, type, id]
   );
+  return toUpdateWeapon;
 }
 
 export default {
