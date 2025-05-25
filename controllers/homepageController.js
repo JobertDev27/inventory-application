@@ -1,4 +1,5 @@
 import query from "../data/query.js";
+import { body, validationResult } from "express-validator";
 
 export async function homepage(req, res) {
   const { search } = req.query;
@@ -15,3 +16,7 @@ export async function weaponPage(req, res) {
   const queryWeapon = await query.getWeaponsById(weaponId);
   res.render("itemPage", { weapon: queryWeapon[0] });
 }
+
+const validateRes = [];
+
+export async function weapondPagePost(req, res) {}
