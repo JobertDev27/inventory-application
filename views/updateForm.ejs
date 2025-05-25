@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Weapon</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <form action="/form" method="POST">
+        <p>Updating : <% weapon.name %></p>
+        <p>Note: Leave field blank for default value</p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" />
+        <label for="price">Price:</label>
+        <input type="text" name="price" />
+        <label for="type">Type:</label>
+        <input type="text" name="type" />
+        <label for="quality"></label>
+        <input type="number" name="price" />
+      </form>
+    </main>
+  </body>
+</html>
