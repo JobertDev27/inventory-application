@@ -12,7 +12,8 @@
   "main": "app.js",
   "scripts": {
     "postgres": "node data/dbScript.js",
-    "start": "node --watch app.js"
+    "start": "node --watch app.js",
+    "build": "echo no build needed"
   },
   "repository": {
     "type": "git",
