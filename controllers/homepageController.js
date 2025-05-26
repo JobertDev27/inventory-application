@@ -16,7 +16,3 @@ export async function weaponPage(req, res) {
   const queryWeapon = await query.getWeaponsById(weaponId);
   res.render("itemPage", { weapon: queryWeapon[0] });
 }
-
-const validateRes = [];
-
-export async function weapondPagePost(req, res) {}
