@@ -22,4 +22,4 @@ app.use(express.static("public"));
 
 app.use("/", homepageRouter);
 
-app.listen(PORT, () => console.log(`Listening at port: ${PORT}`));
+app.listen(PORT, "0.0.0.0", () => console.log(`Listening at port: ${PORT}`));
