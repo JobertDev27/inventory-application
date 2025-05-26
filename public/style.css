@@ -146,3 +146,8 @@ form button {
 .update-btn {
   background-color: rgb(30, 200, 30);
 }
+
+.home-link {
+  color: black;
+  text-decoration: none;
+}
